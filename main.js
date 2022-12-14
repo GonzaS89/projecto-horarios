@@ -1,20 +1,47 @@
-function mueveReloj(){
-    momentoActual = new Date()
-    hora = momentoActual.getHours()
-    minuto = momentoActual.getMinutes()
-    segundo = momentoActual.getSeconds()
+document.addEventListener('DOMContentLoaded', function(){
+    iniciarApp();
+})
 
-   if(minuto <=9){
-    minuto = "0"
-   } 
-   if(segundo <= 9){
-    segundo= "0"+segundo;
-   }
+function iniciarApp(){
+    reloj();
+};
 
-    horaImprimible = hora + " : " + minuto + " : " + segundo;
+   
+function reloj(){
 
-    document.form_reloj.reloj.value = horaImprimible
+    let momentoActual = new Date();
+    let hora = momentoActual.getHours();
+    let minuto = momentoActual.getMinutes();
+    let segundo = momentoActual.getSeconds();
 
-    setTimeout("mueveReloj()",1000)
+       if(minuto <=9){
+        minuto = "0"+minuto
+       } 
+       if(segundo <= 9){
+        segundo= "0"+segundo;
+       }
+
+    let horaImprimible = hora + " : " + minuto + " : " + segundo;
+    document.form_reloj.reloj.value = horaImprimible;
+
+
+
+    /*MOVER RELOJ A TIEMPO ACTUAL*/
+    setTimeout("reloj()",1000)
+    /*                          */
+
+    
+
+    
+    
 }
+
+
+
+
+
+
+
+
+
 
