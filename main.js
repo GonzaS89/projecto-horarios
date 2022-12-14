@@ -41,7 +41,7 @@ boton.addEventListener('click', function(){
     let minutos = momentoActual.getMinutes();
 
     let horaEnEnteros = (hora * 60) + minutos;
-    let horariosFloPo = [14,15,16];
+    let horariosFloPo = [14,15,16,17];
     for(horario of horariosFloPo){
         let difHoraHorario = (horaEnEnteros - (horario*60));
         let difHorarioHora = ((horario*60) - horaEnEnteros)
