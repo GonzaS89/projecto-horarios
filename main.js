@@ -49,11 +49,9 @@ boton.addEventListener('click', function(){
             document.form_reloj3.reloj3.value = `Tu colectivo pasó hace ${difHoraHorario} minutos`;
         }
         else{
-            document.form_reloj3.reloj3.value = `Tu colectivo pasa en ${difHorarioHora} minutos`;
+            document.form_reloj3.reloj3.value = `Tu próximo colectivo pasa en ${difHorarioHora} minutos`;
         }
-       
     }
-    
     
     
 })
